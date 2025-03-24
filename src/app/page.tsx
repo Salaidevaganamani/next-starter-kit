@@ -1,7 +1,6 @@
 import db from '@/modules/db';
 import { faker } from '@faker-js/faker';
 import { revalidatePath } from 'next/cache';
-import Image from 'next/image';
 
 export default async function Home() {
   const posts = await db.post.findMany({ orderBy: { createdAt: 'desc' } });
